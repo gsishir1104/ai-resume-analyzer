@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <section class="hero">
+      <h1>AI Resume Analyzer</h1>
+      <p>
+        Paste your resume and job description to check your match score,
+        missing keywords, and improvement tips.
+      </p>
+    </section>
+
+    <section class="analyzer-card">
+      <label>Paste Resume Text</label>
+      <textarea id="resumeText" placeholder="Paste your resume here..."></textarea>
+
+      <label>Paste Job Description</label>
+      <textarea id="jobText" placeholder="Paste job description here..."></textarea>
+
+      <button onclick="analyzeResume()">Analyze Resume</button>
+    </section>
+
+    <section id="result" class="result-card hidden">
+      <h2>Analysis Result</h2>
+
+      <div class="score-box">
+        <h3 id="matchScore">0%</h3>
+        <p>Match Score</p>
+      </div>
+
+      <div class="result-section">
+        <h3>Found Keywords</h3>
+        <p id="foundKeywords"></p>
+      </div>
+
+      <div class="result-section">
+        <h3>Missing Keywords</h3>
+        <p id="missingKeywords"></p>
+      </div>
+
+      <div class="result-section">
+        <h3>Improvement Tips</h3>
+        <ul id="tipsList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
